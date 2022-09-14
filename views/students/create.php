@@ -48,7 +48,7 @@
                 
                 
             ><br>
-            <?= $_SESSION['errors']['picture'] ?? null ?>
+            <?= $_SESSION['errors']['picture'] ?? null ?><br>
 
             <button>Add</button>
         </form>
