@@ -14,5 +14,5 @@ $student = new Student();
 if (!$student->store($_POST)) {
     header('Location: ./create.php');
 } else {
-    header('Location: ./index.php');
+    header('Location: ./home.php');
 }

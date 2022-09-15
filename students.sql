@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Sep 13, 2022 at 07:01 PM
+-- Generation Time: Sep 15, 2022 at 10:46 AM
 -- Server version: 5.7.33
--- PHP Version: 8.1.10
+-- PHP Version: 8.1.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -39,10 +39,10 @@ CREATE TABLE `students` (
 --
 
 INSERT INTO `students` (`id`, `name`, `student_id`, `picture`) VALUES
-(7, 'jvkhmbn', 8, './../../assests/image/Ash1.jpg'),
-(8, 'hgc', 90, '../../assets/image/Ash1.jpg'),
-(10, 'Ashraf', 1, '22-09-131663094227Ash1.jpg'),
-(11, 'Ashraful', 9, '22-09-131663094868Build_Web_Application2.png');
+(12, 'Electronics', 1, '22-09-151663231676cat1.jpg'),
+(13, 'Cosmetics', 2, '22-09-151663232979cat2.jpg'),
+(15, 'Watch', 500, '22-09-151663236880item1.jpg'),
+(17, 'Runtime Terror', 990, '22-09-151663238701WIN_20220915_16_44_25_Pro.jpg');
 
 --
 -- Indexes for dumped tables
@@ -62,7 +62,7 @@ ALTER TABLE `students`
 -- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -23,7 +23,7 @@
     ?>
 
     <div style="width: 500px; margin:0 auto;">
-        <a class="btn btn-primary my-2" href="./index.php">List</a>
+        <a class="btn btn-primary my-2" href="./home.php">List</a>
 
         <form action="./update.php?id=<?= $studentInfo['id'] ?>" method="post">
             <input name="student_id" value="<?= $studentInfo['student_id'] ?>" placeholder="Enter Student ID">

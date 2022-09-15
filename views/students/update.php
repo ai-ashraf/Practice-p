@@ -16,4 +16,4 @@ $student = new Student();
 
 $student->update($_POST, $_GET['id']);
 
-header('Location: ./index.php');
+header('Location: ./home.php');
