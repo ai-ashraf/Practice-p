@@ -206,117 +206,17 @@
         ?>
 
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-</body>
-                         
-
-     
+    
                         <!-- End -->
-
-
-                   
-                        <!-- <table class="table bg-white rounded shadow-sm  table-hover">
-                            <thead>
-                                <tr>
-                                    <th scope="col" width="50">#</th>
-                                    <th scope="col">Package</th>
-                                    <th scope="col">Tourist Name</th>
-                                    <th scope="col">Person</th>
-                                    <th scope="col">Amount</th>
-                                </tr>
-                            </thead>
-                            <tbody> -->
-                        
-                            
-                            
-               
-                                <!-- <tr>
-                                    <th scope="row"></th>
-                                    <td>ab1</td>
-                                    <td>ab2</td>
-                                    <td>ab3</td>
-                                    <td>ab4</td>
-                                </tr> -->
-                                
-                                
-                                <!-- <tr>
-                                    <th scope="row">2</th>
-                                    <td>Bandorban</td>
-                                    <td>Kobir Hasan</td>
-                                    <td>7500 Tk</td>
-                                </tr> -->
-                                <!-- <tr>
-                                    <th scope="row">3</th>
-                                    <td>Sada Pathor</td>
-                                    <td>Jiniya</td>
-                                    <td>6000 Tk</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">4</th>
-                                    <td>Sada Pathor</td>
-                                    <td>Asha</td>
-                                    <td>6000 Tk</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">5</th>
-                                    <td>Saint Martin</td>
-                                    <td>Shuvo</td>
-                                    <td>10000 Tk</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">6</th>
-                                    <td>Bandorban</td>
-                                    <td>Nazmul</td>
-                                    <td>7000 Tk</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">7</th>
-                                    <td>Sada Pathor</td>
-                                    <td>Tamim Islam</td>
-                                    <td>6000 Tk</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">8</th>
-                                    <td>Saint Martin</td>
-                                    <td>Ashraf</td>
-                                    <td>10000 Tk</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">9</th>
-                                    <td>Cox's Bazar</td>
-                                    <td>Sazib</td>
-                                    <td>6000 Tk</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">10</th>
-                                    <td>Cox's Bazar</td>
-                                    <td>Zico</td>
-                                    <td>8000 Tk</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">11</th>
-                                    <td>Amiyakhum</td>
-                                    <td>Jico</td>
-                                    <td>9000 Tk</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">12</th>
-                                    <td>Cox's Bazar</td>
-                                    <td>Saikat</td>
-                                    <td>8000 Tk</td>
-                                </tr> -->
                             </tbody>
-                        </table>
-                        
+                        </table>                 
                     </div>
                 </div>
-                
-
             </div>
         </div>
     </div>
-    <!-- /#page-content-wrapper -->
     </div>
+    </body>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
@@ -328,16 +228,5 @@
         };
     </script>
 </body>
-
-</html>
-
-
-
-
-
-<!-- Admin End -->
-
-
-   
 
 </html>

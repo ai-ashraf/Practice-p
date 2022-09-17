@@ -158,6 +158,7 @@
 
     
     <a class="btn btn-primary my-3" href="./create.php">Add Category</a>
+    <a class="btn btn-primary my-3" href="./home.php">Home</a>
     <table class="table table-striped" border="1" style="width: 100%;">
         <thead>
             <tr>

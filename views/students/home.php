@@ -32,7 +32,7 @@
     <header >
         <nav class="navbar navbar-expand-lg navbar-light bg-light ">
             <div class="container ">
-              <a class="navbar-brand " href="#">Navbar</a>
+              <a class="navbar-brand " href="#">A.I.</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -70,7 +70,7 @@
                     <i class="bi bi-person"></i> User
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="index.php">Log in</a></li>
+                    <li><a class="dropdown-item" href="admin.php">Log in</a></li>
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="reg.html">Sign up</a></li>
                     
