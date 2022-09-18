@@ -11,7 +11,6 @@ class Student
     public $id;
     public $name;
     public $conn;
-
     private $dbUserName = 'root';
     private $dbPassword = 'root';
     private $dbName = 'php_b8';
@@ -35,6 +34,7 @@ class Student
 
         return $data;
     }
+
 
     public function store(array $data)
     {
@@ -112,6 +112,99 @@ class Student
         $statement = $this->conn->prepare("DELETE FROM  students where id=:s_id");
         $statement->execute([
             's_id' => $id
+        ]);
+
+        $_SESSION['message'] = 'Successfully Deleted';
+    }
+
+    // Products Section
+
+
+    public function ProductIndex()
+    {
+        // select query
+        $statement = $this->conn->query("SELECT * FROM products ORDER BY id desc");
+        $data = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+        return $data;
+    }
+    public function StoreProduct(array $data)
+    {
+        $uploaddir = '../../assets/image/';
+        $originalImageName = $_FILES['picture']['name'];
+        $modifyImageName = date('y-m-d').time() . $originalImageName;
+        $uploadfile = $uploaddir . $modifyImageName;
+        move_uploaded_file($_FILES['picture']['tmp_name'], $uploadfile);
+        // echo "<pre>";
+        // print_r($_FILES);
+
+        // die();
+
+        try {
+            $_SESSION['old'] = $data;
+
+            // if (empty($data['details'])) {
+            //     $_SESSION['errors']['student_id'] = 'Required';
+            // } elseif (!is_numeric($data['student_id'])) {
+            //     $_SESSION['errors']['student_id'] = 'Must be an integer';
+            // }
+
+            // if (empty($data['name'])) {
+            //     $_SESSION['errors']['name'] = 'Required';
+            // }
+            // if (empty($_FILES['name'])) {
+            //     $_SESSION['errors']['picture'] = 'Required';
+            // }
+
+            // if (isset($_SESSION['errors'])) {
+            //     return false;
+            // }
+
+            // todo database insert
+            $statement = $this->conn->prepare("INSERT INTO products (name, price, details, picture) VALUES (:s_name, :p, :s_id, :p_p)");
+
+            $statement->execute([
+                's_name' => $data['name'],
+                'p' => $data['price'],
+
+                's_id' => $data['details'],
+                'p_p' => $modifyImageName
+            ]);
+
+            unset($_SESSION['old']);
+            $_SESSION['message'] = 'Successfully Created';
+            return true;
+        } catch (Exception $th) {
+            $_SESSION['errors']['sqlError'] = $th->getMessage();
+        }
+    }
+    public function ProductDetails(int $id)
+    {
+        // select query
+        $statement = $this->conn->query("SELECT * FROM products where id=$id");
+        $data = $statement->fetch(PDO::FETCH_ASSOC);
+        return $data;
+    }
+
+    public function ProductUpdate(array $data, int $id)
+    {
+        // todo database insert
+        $statement = $this->conn->prepare("UPDATE products set name=:s_name, details=:s_id WHERE id=:r_id");
+
+        $statement->execute([
+            'r_id' => $id,
+            's_name' => $data['name'],
+            's_id' => $data['details']
+        ]);
+
+        $_SESSION['message'] = 'Successfully Updated';
+    }
+
+    public function ProductDestroy(int $id)
+    {
+        $statement = $this->conn->prepare("DELETE FROM  products where id=:r_id");
+        $statement->execute([
+            'r_id' => $id
         ]);
 
         $_SESSION['message'] = 'Successfully Deleted';

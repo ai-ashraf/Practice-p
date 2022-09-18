@@ -6,6 +6,7 @@ use Project\Controllers\Student;
 $student = new Student();
 
 $studentInfo = $student->details($_GET['id']);
+$productInfo = $student->ProductDetails($_GET['id']);
 
 // print_r($studentInfo);
 
@@ -26,17 +27,32 @@ $studentInfo = $student->details($_GET['id']);
     <a class="btn btn-primary mt-3" href="./index.php">List</a>
         <div class="row">
             <div class="col-md-6">
-                <h1>Student Info</h1>
+                <h1>Product Info</h1>
                 <p>Student ID: <?= $studentInfo['student_id'] ?></p>
                 <p>Name: <?= $studentInfo['name'] ?></p>
                 
             </div>
+           
             <div class="col-md-6 " style="width:200px">
                 <p><img src="./../../assets/image/<?= $studentInfo['picture'] ?>" class="img-thumbnail" alt="Profile Picture"></p>
 
             </div>
         </div>
     </div>
+<div class="container">
+    <div class="row">
+
+   
+    <div class="col-md-6">
+                <h1>Product Info</h1>
+                
+                <p>Name: <?= $productInfo['name'] ?></p>
+                <p>Product Price: <?= $productInfo['price'] ?></p>
+                <p>Product Detsild: <?= $productInfo['details'] ?></p>
+                
+            </div>
+            </div>
+</div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

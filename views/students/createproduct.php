@@ -1,38 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Document</title>
-</head>
+<?php
+        session_start();
 
-<body>
-
-    <?php
-    include_once './../../vendor/autoload.php';
-
-    use Project\Controllers\Student;
-
-    $student = new Student();
-
-    $studentInfo = $student->details($_GET['id']);
-    $productInfo = $product->details($_GET['id']);
-
-    // print_r($studentInfo);
-
-    ?>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-</body>
-
-</html>
-
-
-<!-- Start -->
-
+        if (isset($_SESSION['errors'])) {
+            // print_r($_SESSION['errors']);
+            echo '<ul>';
+            foreach ($_SESSION['errors'] as $key => $error) {
+                echo '<li>The ' . $key .' ' . $error . '</li>';
+            }
+            echo '</ul>';
+        }
+        ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -136,7 +113,7 @@
                 </div>
             </nav>
 
-            <!-- <div class="container-fluid px-4">
+            <div class="container-fluid px-4">
                 <div class="row g-3 my-2">
                     <div class="col-md-3">
                         <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
@@ -180,140 +157,75 @@
                             </div>
                             <i class="fa-solid fa-question fs-1 primary-text border rounded-full secondary-bg p-3"></i>
                         </div>
-                    </div> -->
-                <!-- </div> -->
+                    </div>
+                </div>
       
                 <div class="row my-5">
                     <!-- <h3 class="fs-4 mb-3">Total Bookings</h3> -->
                     <div class="col">
                         <!-- STart -->
-                        <div style="width: 500px; margin:0 auto;">
-        <a class="btn btn-primary my-2" href="./home.php">List</a>
+                        <body>
+    <div class="container">
 
-        <form action="./update.php?id=<?= $studentInfo['id'] ?>" method="post">
-            <input name="student_id" value="<?= $studentInfo['student_id'] ?>" placeholder="Enter Student ID">
-            <input name="name" value="<?= $studentInfo['name'] ?>" placeholder="Enter Student Name">
-            <button class="btn btn-success">Update</button>
+       
+
+        <a class="btn btn-primary mb-3" href="./index.php">All Category</a>
+        <form action="./store.php" method="post" enctype="multipart/form-data">
+            
+
+            <input 
+                class="form-control"    
+                type="text" 
+                name="name" 
+                value="<?= $_SESSION['old']['name'] ?? null ?>" 
+                placeholder="Enter Product Name"
+            ><br>
+            <?= $_SESSION['errors']['name'] ?? null ?>
+            <input 
+             class="form-control"
+                type="number" 
+                name="price" 
+                value="<?= $_SESSION['old']['price'] ?? null ?>"
+                placeholder="Enter Price"
+            ><br>
+            <?= $_SESSION['errors']['price'] ?? null ?> <br>
+            <input 
+             class="form-control"
+                type="text" 
+                name="details" 
+                value="<?= $_SESSION['old']['details'] ?? null ?>"
+                placeholder="Enter details"
+            ><br>
+            <?= $_SESSION['errors']['details'] ?? null ?> <br>
+            <input 
+                type="file" 
+                name="picture" 
+                
+                
+            ><br>
+            <?= $_SESSION['errors']['picture'] ?? null ?><br>
+
+            <button class="btn btn-success" >Add</button>
         </form>
-        <form action="./update.php?id=<?= $productInfo['id'] ?>" method="post">
-            <input name="price" value="<?= $productInfo['price'] ?>" placeholder="Enter Student ID">
-            <input name="name" value="<?= $productInfo['name'] ?>" placeholder="Enter Student Name">
-            <button class="btn btn-success">Update</button>
-        </form>
-    </div>
+
+        <?php
+            if (isset($_SESSION['errors'])) {
+                unset($_SESSION['errors']);
+            }
+        ?>
 
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-</body>
-                         
-
-     
+    
                         <!-- End -->
-
-
-                   
-                        <!-- <table class="table bg-white rounded shadow-sm  table-hover">
-                            <thead>
-                                <tr>
-                                    <th scope="col" width="50">#</th>
-                                    <th scope="col">Package</th>
-                                    <th scope="col">Tourist Name</th>
-                                    <th scope="col">Person</th>
-                                    <th scope="col">Amount</th>
-                                </tr>
-                            </thead>
-                            <tbody> -->
-                        
-                            
-                            
-               
-                                <!-- <tr>
-                                    <th scope="row"></th>
-                                    <td>ab1</td>
-                                    <td>ab2</td>
-                                    <td>ab3</td>
-                                    <td>ab4</td>
-                                </tr> -->
-                                
-                                
-                                <!-- <tr>
-                                    <th scope="row">2</th>
-                                    <td>Bandorban</td>
-                                    <td>Kobir Hasan</td>
-                                    <td>7500 Tk</td>
-                                </tr> -->
-                                <!-- <tr>
-                                    <th scope="row">3</th>
-                                    <td>Sada Pathor</td>
-                                    <td>Jiniya</td>
-                                    <td>6000 Tk</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">4</th>
-                                    <td>Sada Pathor</td>
-                                    <td>Asha</td>
-                                    <td>6000 Tk</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">5</th>
-                                    <td>Saint Martin</td>
-                                    <td>Shuvo</td>
-                                    <td>10000 Tk</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">6</th>
-                                    <td>Bandorban</td>
-                                    <td>Nazmul</td>
-                                    <td>7000 Tk</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">7</th>
-                                    <td>Sada Pathor</td>
-                                    <td>Tamim Islam</td>
-                                    <td>6000 Tk</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">8</th>
-                                    <td>Saint Martin</td>
-                                    <td>Ashraf</td>
-                                    <td>10000 Tk</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">9</th>
-                                    <td>Cox's Bazar</td>
-                                    <td>Sazib</td>
-                                    <td>6000 Tk</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">10</th>
-                                    <td>Cox's Bazar</td>
-                                    <td>Zico</td>
-                                    <td>8000 Tk</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">11</th>
-                                    <td>Amiyakhum</td>
-                                    <td>Jico</td>
-                                    <td>9000 Tk</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">12</th>
-                                    <td>Cox's Bazar</td>
-                                    <td>Saikat</td>
-                                    <td>8000 Tk</td>
-                                </tr> -->
                             </tbody>
-                        </table>
-                        
+                        </table>                 
                     </div>
                 </div>
-                
-
             </div>
         </div>
     </div>
-    <!-- /#page-content-wrapper -->
     </div>
+    </body>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
@@ -325,16 +237,5 @@
         };
     </script>
 </body>
-
-</html>
-
-
-
-
-
-<!-- Admin End -->
-
-
-   
 
 </html>

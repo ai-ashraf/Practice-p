@@ -15,5 +15,6 @@ $student = new Student();
 // print_r($_POST);
 
 $student->update($_POST, $_GET['id']);
+$student->ProductUpdate($_POST, $_GET['id']);
 
-header('Location: ./home.php');
+header('Location: ./admin.php');
