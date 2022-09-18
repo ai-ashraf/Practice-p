@@ -117,5 +117,3 @@ class Student
         $_SESSION['message'] = 'Successfully Deleted';
     }
 }
-
-// Product Class start

@@ -7,4 +7,4 @@ $student = new Student();
 
 $student->destroy($_GET['id']);
 
-header('Location: ./home.php');
+header('Location: ./admin.php');
