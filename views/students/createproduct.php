@@ -1,5 +1,12 @@
 <?php
-        session_start();
+include_once './../../vendor/autoload.php';
+
+use Project\Controllers\Student;
+
+$studentObj = new Student();
+
+$students = $studentObj->index();
+        // session_start();
 
         if (isset($_SESSION['errors'])) {
             // print_r($_SESSION['errors']);
@@ -119,8 +126,8 @@
                         <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                             <div>
                             
-                                <h3 class="fs-2">ash1</h3>
-                                <p class="fs-5">Packages</p>
+                                <h3 class="fs-2">17</h3>
+                                <p class="fs-5">Product</p>
                             </div>
                             <i class="fas fa-gift fs-1 primary-text border rounded-full secondary-bg p-3"></i>
                         </div>
@@ -130,8 +137,8 @@
                         <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                             <div>
                             
-                                <h3 class="fs-2">ash2</h3>
-                                <p class="fs-5">Booking</p>
+                                <h3 class="fs-2">123</h3>
+                                <p class="fs-5">Sell</p>
                             </div>
                             <i
                                 class="fas fa-hand-holding-usd fs-1 primary-text border rounded-full secondary-bg p-3"></i>
@@ -142,7 +149,7 @@
                         <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                             <div>
                            
-                                <h3 class="fs-2">ash3</h3>
+                                <h3 class="fs-2">274</h3>
                                 <p class="fs-5">Users</p>
                             </div>
                             <i class="fa-solid fa-user-group fs-1 primary-text border rounded-full secondary-bg p-3"></i>
@@ -153,7 +160,7 @@
                         <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                             <div>
                                 <h3 class="fs-2">5</h3>
-                                <p class="fs-5">Enquiries</p>
+                                <p class="fs-5">Category</p>
                             </div>
                             <i class="fa-solid fa-question fs-1 primary-text border rounded-full secondary-bg p-3"></i>
                         </div>
@@ -170,7 +177,7 @@
        
 
         <a class="btn btn-primary mb-3" href="./index.php">All Category</a>
-        <form action="./store.php" method="post" enctype="multipart/form-data">
+        <form action="./storeproduct.php" method="post" enctype="multipart/form-data">
             
 
             <input 
@@ -188,7 +195,7 @@
                 value="<?= $_SESSION['old']['price'] ?? null ?>"
                 placeholder="Enter Price"
             ><br>
-            <?= $_SESSION['errors']['price'] ?? null ?> <br>
+            <?= $_SESSION['errors']['price'] ?? null ?> 
             <input 
              class="form-control"
                 type="text" 
@@ -196,6 +203,14 @@
                 value="<?= $_SESSION['old']['details'] ?? null ?>"
                 placeholder="Enter details"
             ><br>
+            <select name="category" class="form-select" aria-label="Default select example">
+                <option selected>Select Category</option>
+                <?php
+                foreach ($students as $student) { ?>
+                <option value="<?= $student['name'] ?>"><?= $student['name'] ?></option>
+                <?php } ?>
+            </select>
+            <br>
             <?= $_SESSION['errors']['details'] ?? null ?> <br>
             <input 
                 type="file" 

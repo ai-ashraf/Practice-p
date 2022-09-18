@@ -92,6 +92,15 @@ class Student
         $data = $statement->fetch(PDO::FETCH_ASSOC);
         return $data;
     }
+    public function categorydetails( $category)
+    {
+        // select query
+        $statement = $this->conn->query("SELECT * FROM products where category='$category'");
+        $data = $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $data;
+        
+
+    }
 
     public function update(array $data, int $id)
     {
@@ -161,13 +170,14 @@ class Student
             // }
 
             // todo database insert
-            $statement = $this->conn->prepare("INSERT INTO products (name, price, details, picture) VALUES (:s_name, :p, :s_id, :p_p)");
+            $statement = $this->conn->prepare("INSERT INTO products (name, price, details, category, picture) VALUES (:s_name, :p, :s_id, :c, :p_p)");
 
             $statement->execute([
                 's_name' => $data['name'],
                 'p' => $data['price'],
 
                 's_id' => $data['details'],
+                'c' => $data['category'],
                 'p_p' => $modifyImageName
             ]);
 
@@ -189,13 +199,14 @@ class Student
     public function ProductUpdate(array $data, int $id)
     {
         // todo database insert
-        $statement = $this->conn->prepare("UPDATE products set name=:s_name, price=:p, details=:s_id WHERE id=:r_id");
+        $statement = $this->conn->prepare("UPDATE products set name=:s_name, price=:p, details=:s_id, category=:c WHERE id=:r_id");
 
         $statement->execute([
             'r_id' => $id,
             's_name' => $data['name'],
             'p' => $data['price'],
-            's_id' => $data['details']
+            's_id' => $data['details'],
+            'c' => $data['category']
         ]);
 
         $_SESSION['message'] = 'Successfully Updated';

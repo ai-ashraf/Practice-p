@@ -23,7 +23,7 @@
 
   $students = $studentObj->index();
   $products = $studentObj->ProductIndex();
-
+  // print_r ($students) ;
   if (isset($_SESSION['message'])) {
     echo $_SESSION['message'];
     unset($_SESSION['message']);
@@ -138,13 +138,13 @@
     <div class="container mt-5 mb-5">
       <div class="row">
         <?php foreach ($students as $student) { ?>
-          <div class="col-md-3 ">
+          <div class="col-md-3 mb-3">
             <div class="card">
               <img src="./../../assets/image/<?= $student['picture'] ?>" class="card-img-top" alt="...">
               <div class="card-body text-center">
                 <h5 class="card-title"><?= $student['name'] ?></h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">See All</a>
+                <a href="categorydetails.php?category=<?= $student['name'] ?>" class="btn btn-primary">See All</a>
               </div>
             </div>
           </div>

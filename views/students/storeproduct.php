@@ -11,8 +11,8 @@ use Project\Controllers\Student;
 
 $student = new Student();
 
-if (!$student->store($_POST)) {
-    header('Location: ./create.php');
+if (!$student->StoreProduct($_POST)) {
+    header('Location: ./createproduct.php');
 } else {
     header('Location: ./admin.php');
 }

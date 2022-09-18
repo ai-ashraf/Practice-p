@@ -16,6 +16,9 @@
     use Project\Controllers\Student;
 
     $student = new Student();
+    // $studentObj = new Student();
+
+    $students = $student->index();
 
     $studentInfo = $student->ProductDetails($_GET['id']);
 
@@ -148,6 +151,14 @@
            
             <input class="form-control mb-2" name="name" value="<?= $studentInfo['name'] ?>" placeholder="Enter Product Name">
             <input class="form-control mb-2" name="price" value="<?= $studentInfo['price'] ?>" placeholder="Enter Product Price">
+            <select name="category" class="form-select mb-2" aria-label="Default select example">
+                <option selected><?= $studentInfo['category'] ?></option>
+                <?php
+                foreach ($students as $student) { ?>
+                <option value="<?= $student['name'] ?>"><?= $student['name'] ?></option>
+                <?php } ?>
+            </select>
+        
             <input class="form-control mb-2" name="details" value="<?= $studentInfo['details'] ?>" placeholder="Enter Product Price">
             <button class="btn btn-success">Update</button>
         </form>
