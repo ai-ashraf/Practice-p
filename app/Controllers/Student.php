@@ -47,10 +47,6 @@ class Student
         // print_r($_FILES);
 
         // die();
-        
-
-
-
 
         try {
             $_SESSION['old'] = $data;
