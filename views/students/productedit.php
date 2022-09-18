@@ -17,7 +17,7 @@
 
     $student = new Student();
 
-    $studentInfo = $student->details($_GET['id']);
+    $studentInfo = $student->ProductDetails($_GET['id']);
 
     // print_r($studentInfo);
 
@@ -142,11 +142,13 @@
                     <div class="col">
                         <!-- STart -->
                         <div style="width: 500px; margin:0 auto;">
-        <a class="btn btn-primary my-2" href="./home.php">List</a>
+        <a class="btn btn-primary my-2" href="./admin.php">List</a>
 
         <form action="./update.php?id=<?= $studentInfo['id'] ?>" method="post">
-            <input class="form-control mb-2" name="student_id" value="<?= $studentInfo['student_id'] ?>" placeholder="Enter Student ID">
-            <input class="form-control mb-2" name="name" value="<?= $studentInfo['name'] ?>" placeholder="Enter Student Name">
+           
+            <input class="form-control mb-2" name="name" value="<?= $studentInfo['name'] ?>" placeholder="Enter Product Name">
+            <input class="form-control mb-2" name="price" value="<?= $studentInfo['price'] ?>" placeholder="Enter Product Price">
+            <input class="form-control mb-2" name="details" value="<?= $studentInfo['details'] ?>" placeholder="Enter Product Price">
             <button class="btn btn-success">Update</button>
         </form>
     </div>

@@ -4,8 +4,7 @@ include_once './../../vendor/autoload.php';
 use Project\Controllers\Student;
 
 $student = new Student();
-
-$studentInfo = $student->details($_GET['id']);
+$productInfo = $student->ProductDetails($_GET['id']);
 
 // print_r($studentInfo);
 
@@ -121,15 +120,18 @@ $studentInfo = $student->details($_GET['id']);
 <div class="container mx-4">
     
         <div class="row">
-            <div class="col-md-6">
+        <div class="col-md-6">
                 <h1>Product Info</h1>
-                <p>Product : <?= $studentInfo['student_id'] ?></p>
-                <p>Name: <?= $studentInfo['name'] ?></p>
+                
+                <p>Name: <?= $productInfo['name'] ?></p>
+                <p>Product Price: <?= $productInfo['price'] ?></p>
+                <p>Product Detaild: <?= $productInfo['details'] ?></p>
                 
             </div>
            
+           
             <div class="col-md-6 " style="width:600px">
-                <p><img src="./../../assets/image/<?= $studentInfo['picture'] ?>" class="img-thumbnail" alt="Profile Picture"></p>
+                <p><img src="./../../assets/image/<?= $productInfo['picture'] ?>" class="img-thumbnail" alt="Profile Picture"></p>
 
             </div>
         </div>

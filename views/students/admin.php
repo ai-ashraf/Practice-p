@@ -212,8 +212,8 @@
                     <td><?= $product['price'] ?></td>
                     <td><?= $product['name'] ?></td>
                     <td>
-                        <a class="btn btn-primary" href="show.php?id=<?= $product['id'] ?>">Details</a>
-                        <a class="btn btn-success" href="edit.php?id=<?= $product['id'] ?>">Edit</a>
+                        <a class="btn btn-primary" href="productshow.php?id=<?= $product['id'] ?>">Details</a>
+                        <a class="btn btn-success" href="productedit.php?id=<?= $product['id'] ?>">Edit</a>
                         <a class="btn btn-danger" href="delete.php?id=<?= $product['id'] ?>" onclick="return confirm('Are You Sure Want to Delete ?')">Delete</a>
                     </td>
                 </tr>

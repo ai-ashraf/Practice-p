@@ -150,10 +150,10 @@
           </div>
         <?php } ?>
 
-
+        </section>
         <!-- END -->
 
-  </section>
+  
 
 
   <section New Product>
@@ -164,32 +164,25 @@
     <div class="container-fluid mt-5 mb-5">
       <div class="row">
         <?php foreach ($products as $student) { ?>
-          <div class="col-md-3 ">
+          <div class="col-md-3 mb-3">
             <div class="card">
               <img src="./../../assets/image/<?= $student['picture'] ?>" class="card-img-top" alt="...">
               <div class="card-body text-center">
                 <h5 class="card-title"><?= $student['name'] ?></h5>
                 <h5 class="card-title"> Price : <?= $student['price'] ?> TK</h5>
-                <p class="card-text"><?= $student['details'] ?></p>
-                <a href="#" class="btn btn-primary">Buy Now</a>
+                <!-- <p class="card-text"><?= $student['details'] ?></p> -->
+                <a href="#" class="btn btn-primary">See Details</a>
               </div>
             </div>
           </div>
-          
         <?php } ?>
-
-
-
-
-
-
       </div>
     </div>
     
   </section>
 
   <!-- New Product  -->
-  <section>
+  <!-- <section>
     <div class="title text-center mb-3 mt-5">
       <h3>New Product</h3>
     </div>
@@ -232,14 +225,14 @@
 
       </div>
     </div>
-  </section>
+  </section> -->
 
 
   <!--Footer section-->
   <footer class=" footer border-top mt-5 py-5">
     <div class="container">
       <div class="row">
-        <div class="col-lg-3">
+        <div class="col-md-3 mb-3">
           <img src="" height="80" alt="">
           <h4 class="mt-3">E-commerce</h4>
 

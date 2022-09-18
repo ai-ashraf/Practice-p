@@ -189,11 +189,12 @@ class Student
     public function ProductUpdate(array $data, int $id)
     {
         // todo database insert
-        $statement = $this->conn->prepare("UPDATE products set name=:s_name, details=:s_id WHERE id=:r_id");
+        $statement = $this->conn->prepare("UPDATE products set name=:s_name, price=:p, details=:s_id WHERE id=:r_id");
 
         $statement->execute([
             'r_id' => $id,
             's_name' => $data['name'],
+            'p' => $data['price'],
             's_id' => $data['details']
         ]);
 
