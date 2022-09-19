@@ -14,7 +14,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-3 mb-3">
-          <img src="" height="80" alt="">
+          <img src="./../../assets/image/e-commerce.png" height="90" alt="">
           <h4 class="mt-3">E-commerce</h4>
 
 

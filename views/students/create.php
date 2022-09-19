@@ -63,10 +63,10 @@
             <div class="list-group list-group-flush my-3">
                 <a href="index.php" class="list-group-item list-group-item-action bg-transparent second-text active">
                     <i class="fal fa-chart-line me-2"></i>Dashboard</a>
-                <a href="create.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
-                        class="fas fa-project-diagram me-2"></i>Create Packages</a>
-                <a href="all_package.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-                    <i class="fa-solid fa-user-group"></i>See Package</a>
+                <a href="admin.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                        class="fas fa-project-diagram me-2"></i>home</a>
+                <a href="createproduct.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fa-solid fa-user-group"></i>Add Product</a>
                 <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                     <i class="fa-solid fa-money-bill-1-wave me-2"></i>Payments</a>
                 <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">

@@ -36,7 +36,7 @@
                             <button type="submit" class="btn btn-warning mb-3">Login</button>
                         </div>
                         <div class="mt-2">
-                            <a href="reg.html" class="btn btn-success mb-3">Create New Account</a>
+                            <a href="signup.php" class="btn btn-success mb-3">Create New Account</a>
                         </div>
                         
                       

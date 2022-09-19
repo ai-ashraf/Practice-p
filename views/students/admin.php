@@ -40,18 +40,18 @@
     <div class="d-flex" id="wrapper">
         <!-- Sidebar -->
         <div class="bg-white" id="sidebar-wrapper">
-            <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom">Tour Management</div>
+            <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom">E-Commerce</div>
             <div class="list-group list-group-flush my-3">
                 <a href="index.php" class="list-group-item list-group-item-action bg-transparent second-text active">
                     <i class="fal fa-chart-line me-2"></i>Dashboard</a>
-                <a href="create.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
-                        class="fas fa-project-diagram me-2"></i>Create Packages</a>
-                <a href="all_package.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-                    <i class="fa-solid fa-user-group"></i>See Package</a>
+                <a href="./createproduct.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                        class="fas fa-project-diagram me-2"></i>Add Product</a>
+                <a href="./create.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fa-solid fa-user-group"></i>Create Category</a>
                 <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                     <i class="fa-solid fa-money-bill-1-wave me-2"></i>Payments</a>
                 <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-                    <i class="fa-solid fa-question me-2"></i>Enquiries</a>
+                    <i class="fa-solid fa-question me-2"></i>Sell</a>
                 <a href="all_review.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                     <i class="fas fa-star me-2"></i>Reviews</a>
                 <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
@@ -100,8 +100,8 @@
                         <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                             <div>
                             
-                                <h3 class="fs-2">ash1</h3>
-                                <p class="fs-5">Packages</p>
+                                <h3 class="fs-2">5</h3>
+                                <p class="fs-5">Category</p>
                             </div>
                             <i class="fas fa-gift fs-1 primary-text border rounded-full secondary-bg p-3"></i>
                         </div>
@@ -111,8 +111,8 @@
                         <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                             <div>
                             
-                                <h3 class="fs-2">ash2</h3>
-                                <p class="fs-5">Booking</p>
+                                <h3 class="fs-2">256</h3>
+                                <p class="fs-5">Product</p>
                             </div>
                             <i
                                 class="fas fa-hand-holding-usd fs-1 primary-text border rounded-full secondary-bg p-3"></i>
@@ -123,7 +123,7 @@
                         <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                             <div>
                            
-                                <h3 class="fs-2">ash3</h3>
+                                <h3 class="fs-2">954</h3>
                                 <p class="fs-5">Users</p>
                             </div>
                             <i class="fa-solid fa-user-group fs-1 primary-text border rounded-full secondary-bg p-3"></i>
@@ -133,8 +133,8 @@
                     <div class="col-md-3">
                         <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                             <div>
-                                <h3 class="fs-2">5</h3>
-                                <p class="fs-5">Enquiries</p>
+                                <h3 class="fs-2">51</h3>
+                                <p class="fs-5">Sell</p>
                             </div>
                             <i class="fa-solid fa-question fs-1 primary-text border rounded-full secondary-bg p-3"></i>
                         </div>
